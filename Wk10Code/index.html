@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Characters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <h1>Rick and Morty Characters</h1>
+
+    <section id="info">
+        <p>
+            There are <span id="count">___</span> characters on this page.<br>
+            Humans: <span id="humans">___</span> 
+            Aliens: <span id="aliens">___</span> 
+        </p>
+
+        <p>
+            <button onclick="hideHumans">Hide Humans</button>
+            <button onclick="hideAliens">Hide Aliens</button>
+            <button onclick="showAll()">Show All</button>
+        </p>
+    </section>
+    <div class = "character-grid">
+        <div class="character human" style="color:blue;">
+            <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" width="100" alt="Rick Sanchez">
+            <h3>Rick Sanchez</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (C-137)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/2.jpeg" width="100" alt="Morty Smith">
+            <h3>Morty Smith</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/3.jpeg" width="100" alt="Summer Smith">
+            <h3>Summer Smith</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (Replacement Dimension)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/4.jpeg" width="100" alt="Beth Smith">
+            <h3>Beth Smith</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (Replacement Dimension)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/5.jpeg" width="100" alt="Jerry Smith">
+            <h3>Jerry Smith</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (Replacement Dimension)</dd></dl>
+        </div>
+
+        <div class="character alien">
+            <img src="https://rickandmortyapi.com/api/character/avatar/6.jpeg" width="100" alt="Abadango Cluster Princess">
+            <h3>Abadango Cluster Princess</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Alien</dd><dt>Origin:</dt><dd>Abadango</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/7.jpeg" width="100" alt="Abradolf Lincler">
+            <h3>Abradolf Lincler</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (Replacement Dimension)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/8.jpeg" width="100" alt="Adjudicator Rick">
+            <h3>Adjudicator Rick</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/9.jpeg" width="100" alt="Agency Director">
+            <h3>Agency Director</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (Replacement Dimension)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/10.jpeg" width="100" alt="Alan Rails">
+            <h3>Alan Rails</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/11.jpeg" width="100" alt="Albert Einstein">
+            <h3>Albert Einstein</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (C-137)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/12.jpeg" width="100" alt="Alexander">
+            <h3>Alexander</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (C-137)</dd></dl>
+        </div>
+
+        <div class="character alien">
+            <img src="https://rickandmortyapi.com/api/character/avatar/13.jpeg" width="100" alt="Alien Googah">
+            <h3>Alien Googah</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Alien</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character alien">
+            <img src="https://rickandmortyapi.com/api/character/avatar/14.jpeg" width="100" alt="Alien Morty">
+            <h3>Alien Morty</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Alien</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character alien">
+            <img src="https://rickandmortyapi.com/api/character/avatar/15.jpeg" width="100" alt="Alien Rick">
+            <h3>Alien Rick</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Alien</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character alien">
+            <img src="https://rickandmortyapi.com/api/character/avatar/16.jpeg" width="100" alt="Amish Cyborg">
+            <h3>Amish Cyborg</h3>
+            <dl><dt>Status:</dt><dd>Dead</dd><dt>Species:</dt><dd>Alien</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/17.jpeg" width="100" alt="Annie">
+            <h3>Annie</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>Earth (C-137)</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/18.jpeg" width="100" alt="Antenna Morty">
+            <h3>Antenna Morty</h3>
+            <dl><dt>Status:</dt><dd>Alive</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/19.jpeg" width="100" alt="Antenna Rick">
+            <h3>Antenna Rick</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+
+        <div class="character human">
+            <img src="https://rickandmortyapi.com/api/character/avatar/20.jpeg" width="100" alt="Ants in my Eyes Johnson">
+            <h3>Ants in my Eyes Johnson</h3>
+            <dl><dt>Status:</dt><dd>unknown</dd><dt>Species:</dt><dd>Human</dd><dt>Origin:</dt><dd>unknown</dd></dl>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+
+    <!-- Students will add their own JS here -->
+    <script>
+        // ===== PHASE 1: Simple one-line DOM manipulations =====
+        // Example: Change the page title color, modify first name, etc.
+
+        // 1. Change the <h1> color
+            document.querySelector("h1").style.color = "purple";
+        // 2. Change the background color of the first .human card
+            document.querySelector(".human").style.backgroundColor = "cyan";
+        // 3. Change the text of the first <h3>
+            document.querySelector("h3").innerHTML = "TeXtY tExT";
+        // 4. Change the border style of the first image
+            document.querySelector("img").border = "5px solid #FFFFFF";
+        // ===== PHASE 2: Count elements and display info =====
+        // Use querySelectorAll() and loops to fill in the values above.
+
+        // 5. Show total number of character cards
+            let cards = document.querySelectorAll(".character").length;
+            document.querySelector("#count").innerHTML = cards;
+        // 6. Count how many humans there are
+            let humans = document.querySelectorAll(".human").length;
+            document.querySelector("#humans").innerHTML = humans;
+        // 7. Count how many aliens there are
+            let aliens = document.querySelectorAll(".alien").length;
+            document.querySelector("#aliens").innerHTML = aliens;
+
+        // ===== PHASE 3: Practice with querySelectorAll() loops =====
+        // 8. Make all character names uppercase
+            let characters = document.querySelectorAll("h3");
+            characters.forEach(name => {
+                name.style.textTransform = "uppercase";
+            });
+
+        // 9. Change border color for all aliens
+            document.querySelectorAll(".alien").forEach(alien =>{
+                alien.style.border = "5px solid green";
+            });
+
+        // 10. Change opacity for all pictures to 90%
+            document.querySelectorAll("img").forEach(img => {
+                img.style.opacity = "90%";
+            });
+
+        // 11. Give every other card a 5px border
+            document.querySelectorAll(".character:nth-child(2n+1)").forEach(card => {
+                card.style.border = "5px solid black";
+            });
+
+    </script>
+</body>
+</html>
