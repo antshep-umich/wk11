@@ -1,4 +1,5 @@
 let video = document.querySelector(".video");
+let slider = document.querySelector("#slider");
 
 document.querySelector("#play").addEventListener("click", function(){
     console.log("Play Video");
@@ -39,10 +40,24 @@ document.querySelector("#skip").addEventListener("click", function(){
 
 document.querySelector("#mute").addEventListener("click", function(){
     console.log("Toggling Mute");
-    video.toggleAttribute("muted");
+    video.muted = !video.muted;
     if (video.muted){this.innerHTML = "Unmute";}
     else {
         this.innerHTML = "Mute";
     }
+});
 
+slider.addEventListener("change", function(){
+    vol = slider.value;
+    console.log("Volume changed to " + vol + "%");
+    video.volume = vol/100;
+    document.querySelector("#volume").innerHTML = slider.value + "%";
+});
+
+window.addEventListener("load", function(){
+    document.querySelector("#volume").innerHTML = slider.value + "%";
+});
+
+document.querySelector("#vintage").addEventListener("click", function(){
+    video.classList.toggle("oldSchool");
 });
